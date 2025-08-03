@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Exemple" />
+
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+		<!-- Fontawesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+			integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+		<link href="https://fonts.cdnfonts.com/css/saturday-lovers" rel="stylesheet" />
+
+		<link rel="stylesheet" href="style.css" />
+		<script src="app.js" defer></script>
+
+		<title>Document</title>
+
+		<style>
+			* {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				font-family: 'Montserrat', sans-serif;
+			}
+
+			.serif {
+				font-family: 'Saturday Lovers', sans-serif;
+			}
+
+			.fade-on {
+				animation: afa 1s ease-in-out;
+			}
+			.fade-on2 {
+				opacity: 0;
+				animation: afa2 1s ease-in-out 0.5s both;
+			}
+			@keyframes afa {
+				0% {
+					opacity: 0;
+					letter-spacing: -10px;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes afa2 {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+
+			.fade-bg {
+				animation: fadeBg 2s ease-in-out;
+			}
+			@keyframes fadeBg {
+				0% {
+					transform: translateY(50px);
+					opacity: 0;
+				}
+				100% {
+					transform: translateY(0);
+					top: 0;
+					opacity: 1;
+				}
+			}
+
+			.animate-slide {
+				animation: slide 40s linear infinite;
+			}
+
+			/* MB <= 767 - TB <= 1023 - */
+			@media screen and (max-width: 767px) {
+				.animate-slide {
+					animation: none;
+				}
+			}
+
+			@keyframes slide {
+				0% {
+					transform: translateX(0);
+				}
+				50% {
+					transform: translateX(-80%);
+				}
+				100% {
+					transform: translateX(0);
+				}
+			}
+		</style>
+	</head>
+	<body class="text-neutral-700 bg-[#fbfcfc]">
+		<main class="flex flex-col gap-20">
+			<!-- Hero -->
+			<section class="h-screen md:p-14">
+				<div class="md:border px-2 md:px-0 h-full grid place-items-center border-neutral-300 relative overflow-hidden">
+					<div class="fade-bg absolute inset-0 h-2/3 mt-auto -z-20">
+						<img src="./flower.jpg" class="w-full h-full object-cover" />
+					</div>
+					<div class="absolute inset-0 h-2/3 mt-auto -z-10 bg-gradient-to-b from-[#fbfcfc] to-neutral-50/80 fade-bg"></div>
+					<div class="text-center max-w-4xl">
+						<h1 class="serif text-8xl md:text-9xl fade-on">Giovanna Sallentel</h1>
+						<h3 class="text-lg md:text-2xl text-neutral-400 tracking-widest fade-on2 mb-10 md:mb-16">CERIMONIALISTA</h3>
+						<p class="text-neutral-500 fade-on2 text-sm md:text-lg px-4">
+							Meu trabalho é escutar seus desejos, entender sua essência e traduzi-los em uma celebração que reflete sua personalidade em cada detalhe.
+						</p>
+
+						<a
+							href="#contact"
+							class="block w-max mx-auto fade-on2 px-7 backdrop-blur-[2px] py-4 border cursor-pointer hover:bg-transparent bg-neutral-800 hover:text-neutral-700 text-white mt-10 duration-300 border-neutral-300 active:scale-[0.98]">
+							Fale comigo
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Services -->
+			<section id="services" class="lg:mb-32">
+				<div class="flex gap-4 w-max mx-auto mb-5">
+					<div class="flex items-center">
+						<div class="w-8 bg-neutral-700 h-[1px]"></div>
+						<div class="border w-3 rotate-45 h-3"></div>
+					</div>
+					<h5 class="tracking-widest font-medium">SERVIÇOS</h5>
+					<div class="flex items-center">
+						<div class="border w-3 rotate-45 h-3"></div>
+						<div class="w-8 bg-neutral-700 h-[1px]"></div>
+					</div>
+				</div>
+
+				<h3 class="md:w-max mx-auto text-4xl max-w-lg text-center mb-10 md:mb-20 px-4">Seu evento com beleza e sofisticação</h3>
+
+				<div class="flex justify-center flex-wrap gap-10 max-w-7xl mx-auto py-10">
+					<div class="flex flex-wrap gap-8">
+						<div class="flex flex-col items-center w-72 gap-2 group">
+							<div class="rounded-full w-20 h-20 overflow-hidden grayscale-100 group-hover:grayscale-0 duration-300">
+								<img src="/festa.jpg" alt="" class="w-full h-full object-cover" />
+							</div>
+							<h5 class="w-max font-semibold">Festas & Aniversários</h5>
+							<p class="text-center text-sm">Festas de 15 anos, aniversários ou bodas, garantindo que cada momento especial seja anunciado com emoção.</p>
+						</div>
+					</div>
+
+					<div class="flex flex-wrap gap-8">
+						<div class="flex flex-col items-center w-72 gap-2 group">
+							<div class="rounded-full w-20 h-20 overflow-hidden grayscale-100 group-hover:grayscale-0 duration-300">
+								<img src="/casamentos.jpg" alt="" class="w-full h-full object-cover" />
+							</div>
+							<h5 class="w-max font-semibold">Casamentos</h5>
+							<p class="text-center text-sm">Cerimônia de casamento com discursos personalizados e uma narrativa que celebra a história e o amor do casal.</p>
+						</div>
+					</div>
+
+					<div class="flex flex-wrap gap-8">
+						<div class="flex flex-col items-center w-72 gap-2 group">
+							<div class="rounded-full w-20 h-20 overflow-hidden grayscale-100 group-hover:grayscale-0 duration-300">
+								<img src="/formatura.jpg" alt="" class="w-full h-full object-cover" />
+							</div>
+							<h5 class="w-max font-semibold">Formaturas & Premiações</h5>
+							<p class="text-center text-sm">Formatura, premiações e homenagens, com a leitura de discursos e o anúncio de cada etapa do evento.</p>
+						</div>
+					</div>
+
+					<div class="flex flex-wrap gap-8">
+						<div class="flex flex-col items-center w-72 gap-2 group">
+							<div class="rounded-full w-20 h-20 overflow-hidden grayscale-100 group-hover:grayscale-0 duration-300">
+								<img src="/lancamento.jpg" alt="" class="w-full h-full object-cover" />
+							</div>
+							<h5 class="w-max font-semibold">Anfitrião para Lançamentos</h5>
+							<p class="text-center text-sm">
+								Eventos de lançamento de produtos ou serviços, com a apresentação de funcionalidades e discursos dos diretores da empresa.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- About -->
+			<section id="about" class="pt-5 md:pt-10">
+				<div class="flex">
+					<div class="w-2/5 max-h-screen overflow-hidden relative hidden lg:block">
+						<div class="absolute inset-0 bg-gradient-to-r from-[#fbfcfc]/5 to-[#fbfcfc] z-10"></div>
+						<img src="/eu.jpg" alt="" class="h-full -mt-30 w-full object-cover grayscale-100" />
+					</div>
+
+					<div class="px-4 md:px-20 flex-1 md:h-full">
+						<div class="flex items-center gap-8 mb-8 mx-auto md:w-max">
+							<div class="flex items-center flex-1">
+								<div class="w-full hidden md:block bg-neutral-700 h-[1px]"></div>
+								<div class="border w-3 rotate-45 h-3"></div>
+							</div>
+							<h3 class="serif text-7xl md:text-9xl text-center w-max">Sobre Mim</h3>
+
+							<div class="flex items-center flex-1">
+								<div class="border ml-auto md:ml-0 w-3 rotate-45 h-3"></div>
+								<div class="w-full hidden md:block bg-neutral-700 h-[1px]"></div>
+							</div>
+						</div>
+
+						<div class="md:text-lg text-justify flex flex-col gap-4">
+							<p>Olá! Eu sou a Giovanna Sallentel, cerimonialista apaixonada por criar experiências que marcam vidas.</p>
+							<p>
+								Minha jornada começou no universo acadêmico, onde tive o privilégio de abrir e conduzir eventos como seminários, apresentações e projetos
+								institucionais. Foi ali que descobri o quanto amo planejar, falar em público, organizar cada etapa com cuidado — e principalmente, dar vida a
+								momentos especiais.
+							</p>
+							<p>
+								Minha missão é fazer com que cada cerimônia tenha a sua própria alma. Sou detalhista, comunicativa e presente em todas as etapas — do planejamento
+								ao grande dia. Trabalho com cronogramas minuciosos, soluções criativas e, claro, aquele toque humano que transforma tudo em memória afetiva.
+							</p>
+							<p>Também realizo cerimoniais em inglês e espanhol, ideal para eventos bilíngues ou convidados internacionais.</p>
+							<p>
+								Se você busca alguém que cuide do seu momento com profissionalismo, sensibilidade e presença real, vai ser um prazer te acompanhar nessa construção.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Testimonials -->
+			<section id="testimonials" class="overflow-hidden pt-10 mb-20 md:mb-40">
+				<div class="flex gap-4 w-max mx-auto mb-5">
+					<div class="flex items-center">
+						<div class="w-8 bg-neutral-700 h-[1px]"></div>
+						<div class="border w-3 rotate-45 h-3"></div>
+					</div>
+					<h5 class="tracking-widest font-medium">TESTEMUNHAS</h5>
+					<div class="flex items-center">
+						<div class="border w-3 rotate-45 h-3"></div>
+						<div class="w-8 bg-neutral-700 h-[1px]"></div>
+					</div>
+				</div>
+
+				<h3 class="md:w-max mx-auto text-4xl max-w-lg text-center mb-20 md:mb-40 px-4">Momentos inesquecíveis, na voz de quem viveu</h3>
+
+				<div class="relative">
+					<div class="hidden md:block absolute left-0 bg-gradient-to-r z-10 from-[#fbfcfc] via-transparent to-[#fbfcfc] w-full h-full"></div>
+					<ul class="px-10 md:px-0 pb-4 md:pl-80 gap-20 animate-slide flex overflow-x-auto md:overflow-visible">
+						<li class="w-[300px] min-w-[300px] md:min-w-[500px] md:w-[500px] text-center mx-auto">
+							<h6 class="tracking-widest text-lg font-medium">ANDRÉ LUCAS</h6>
+							<p class="mb-4 text-neutral-500">Aniversários 15 anos</p>
+							<p class="">
+								A Giovanna foi impecável no trabalho dela!! Se preocupou com cada detalhe, principalmente em ter uma boa fala, sendo firme e atenciosa. Super indico
+								os serviços dela, soube tratar os convidados da melhor forma possível, com educação!! Sempre disponível e trazendo alegria para o ambiente!!
+							</p>
+						</li>
+						<li class="w-[300px] min-w-[300px] md:min-w-[500px] md:w-[500px] text-center mx-auto">
+							<h6 class="tracking-widest text-lg font-medium">MARIA ISABELA</h6>
+							<p class="mb-4 text-neutral-500">Aniversários 15 anos</p>
+							<p class="">
+								A forma como guiou a minha entrada de debutante, os discursos, foram admiráveis, sempre improvisando pra não causar uma tensão. Ela conseguiu
+								realizar todas minhas expectativas e sem dúvidas foi a parte importante pra transformar meu evento especial e memorável.
+							</p>
+						</li>
+						<li class="w-[300px] min-w-[300px] md:min-w-[500px] md:w-[500px] text-center mx-auto">
+							<h6 class="tracking-widest text-lg font-medium">MONICA SALLES</h6>
+							<p class="mb-4 text-neutral-500">Aniversários 15 anos</p>
+							<p class="">
+								Gostaríamos de expressar nossa imensa gratidão à Giovanna, nossa mestre de cerimônias, que se destacou pela sua oratória impecável, pontualidade
+								exemplar e cordialidade com todos os convidados. Sua presença fez toda a diferença e contribuiu para o sucesso do evento. Muito obrigada!
+							</p>
+						</li>
+						<li class="w-[300px] min-w-[300px] md:min-w-[500px] md:w-[500px] text-center mx-auto">
+							<h6 class="tracking-widest text-lg font-medium">GUILHERME RIBEIRO</h6>
+							<p class="mb-4 text-neutral-500">Aniversários 15 anos</p>
+							<p class="">
+								Profissional excepcional! Oratória impecável, fala com clareza, emoção e muita segurança. Apresentou um roteiro bem estruturado e consultou a
+								aniversariante a todo momento nos preparativos. Sem dúvida, recomendo!
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Contact -->
+			<footer id="contact" class="md:bg-neutral-950 text-neutral-100 md:py-0 md:pt-20 relative">
+				<div class="flex items-center flex-col">
+					<!-- <div class="border w-20 h-20 rounded-full"></div> -->
+					<h3 class="text-9xl text-center py-10 serif">Meu Contato</h3>
+				</div>
+
+				<div class="flex flex-col w-max mx-auto mb-20">
+					<button>
+						<a
+							href="https://www.instagram.com/giocerimoniale/"
+							target="_blank"
+							class="border-b p-4 flex gap-4 items-center hover:tracking-wider duration-500 hover:opacity-75">
+							<i class="fa-brands fa-instagram"></i>
+							<p class="w-full text-sm">@giovannasallentel</p>
+						</a>
+					</button>
+					<button>
+						<a href="https://wa.me/5521986382528" target="_blank" class="border-b p-4 flex gap-4 items-center hover:tracking-wider duration-500 hover:opacity-75">
+							<i class="fa-brands fa-whatsapp"></i>
+							<p class="w-full text-sm">(21) 9 98754-1281</p>
+						</a>
+					</button>
+					<div class="p-4 flex gap-4 items-center">
+						<i class="fa-regular fa-envelope"></i>
+						<p class="w-full text-sm">gigigatinha@gmail.com</p>
+					</div>
+				</div>
+
+				<div class="md:h-[400px] h-full absolute inset-0 overflow-hidden md:relative -z-10 md:z-0">
+					<div class="absolute inset-0 bg-gradient-to-b from-neutral-950 to-neutral-950/80 md:to-neutral-950/80 z-10"></div>
+					<img src="./image1.jpg" class="w-full h-full object-cover" />
+				</div>
+
+				<div class="text-center px-4 mx-auto py-4 border-t border-neutral-700 md:text-sm text-xs opacity-70">
+					Giovanna Sallentel - Todos os direitos reservados &copy; 2025
+				</div>
+			</footer>
+		</main>
+	</body>
+</html>
